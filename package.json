@@ -1,0 +1,38 @@
+{
+  "name": "react-since",
+  "version": "1.0.10",
+  "description": "A tiny react component to present time ago in a useful format",
+  "main": "./dist/bundle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tsmith123/react-since.git"
+  },
+  "keywords": [
+    "React",
+    "ReactJS",
+    "Time",
+    "TimeAgo",
+    "Since"
+  ],
+  "author": "Tom Smith",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tsmith123/react-since/issues"
+  },
+  "homepage": "https://github.com/tsmith123/react-since#readme",
+  "devDependencies": {
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.0",
+    "babel-plugin-transform-class-properties": "^6.3.13",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "webpack": "^2.5.1"
+  },
+  "dependencies": {
+    "prop-types": "^15.5.10"
+  }
+}
