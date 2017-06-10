@@ -1,6 +1,6 @@
 {
   "name": "react-since",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "A tiny react component to present time ago in a useful format",
   "main": "./dist/bundle.js",
   "scripts": {
