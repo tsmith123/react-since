@@ -16,7 +16,7 @@ The component requires a `date` prop and returns a `<span></span>` containing th
     <Since date={date} />
 
 ## Live Prop (Boolean)
-The component by default is live meaning that dates will auto-update every sixty seconds. You can override this setting by passing a `live` prop like this:
+The component by default is live meaning that dates will auto-update at set intervals. You can override this setting by passing a `live` prop like this:
 
     <Since date={'2019-05-24 10:30:00.000Z'} live={false} />
 
