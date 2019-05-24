@@ -2,7 +2,7 @@
   "name": "react-since",
   "version": "1.2.0",
   "description": "A tiny react component to present time passed in a humanistic format",
-  "main": "dist/index.js",
+  "main": "dist/react-since.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "transpile": "babel src -d dist",
