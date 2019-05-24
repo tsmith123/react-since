@@ -14,6 +14,10 @@
     "prop-types": "^15.6.2",
     "react": "^16.3.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tsmith123/react-since"
+  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
