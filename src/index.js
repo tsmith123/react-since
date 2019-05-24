@@ -13,7 +13,6 @@ class Since extends React.Component {
   }
 
   tick = () => {
-    console.log('TICK...')
     const { date, seconds } = this.props
 
     const timeoutId = setTimeout(this.tick, 1000 * seconds)
@@ -50,9 +49,6 @@ class Since extends React.Component {
     // convert date to milliseconds
     const then = Date.parse(date)
     const now = Date.now()
-
-    console.log(now)
-    console.log(then)
 
     // get difference in seconds between two dates
     const seconds = Math.round(Math.abs(now - then) / 1000)
