@@ -13,11 +13,13 @@ class Since extends React.Component {
   }
 
   tick = () => {
-    const { seconds } = this.props
+    const { date, seconds } = this.props
 
     const timeoutId = setTimeout(this.tick, 1000 * seconds)
 
-    this.setState({ timeoutId })
+    const since = this.getSince(date)
+
+    this.setState({ since, timeoutId })
   }
 
   componentDidMount () {
@@ -26,7 +28,9 @@ class Since extends React.Component {
     // don't go any further if no date
     if (!date) return
 
-    this.init(date)
+    const since = this.getSince(date)
+
+    this.setState({ since })
 
     if (live) {
       this.tick()
@@ -41,20 +45,15 @@ class Since extends React.Component {
     }
   }
 
-  init = date => {
+  // the logic - needs cleaning up
+  getSince = date => {
     // convert date to milliseconds
     const then = Date.parse(date)
     const now = Date.now()
 
     // get difference in seconds between two dates
     const seconds = Math.round(Math.abs(now - then) / 1000)
-    const since = this.getSince(seconds)
 
-    this.setState({ since })
-  }
-
-  // the logic - needs cleaning up
-  getSince (seconds) {
     const minutes = Math.round(seconds / 60)
     if (minutes < 5) {
       return 'just now'
