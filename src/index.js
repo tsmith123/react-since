@@ -13,26 +13,33 @@ class Since extends React.Component {
   }
 
   tick = () => {
-    const { date, seconds } = this.props
-
-    const timeoutId = setTimeout(this.tick, 1000 * seconds)
+    const newState = { ...this.state }
+    const { live, date, seconds } = this.props
 
     const since = this.getSince(date)
+    newState.since = since
 
-    this.setState({ since, timeoutId })
+    if (live) {
+      const timeoutId = setTimeout(this.tick, 1000 * seconds)
+      newState.timeoutId = timeoutId
+    }
+
+    this.setState(newState)
   }
 
   componentDidMount () {
-    const { live, date } = this.props
-
-    // don't go any further if no date
+    const { date } = this.props
     if (!date) return
 
-    if (live) {
+    this.tick()
+  }
+
+  componentDidUpdate (prevProps) {
+    const { date } = this.props
+    if (!date) return
+
+    if (prevProps.date !== date) {
       this.tick()
-    } else {
-      const since = this.getSince(date)
-      this.setState({ since })
     }
   }
 
