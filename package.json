@@ -1,6 +1,6 @@
 {
   "name": "react-since",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "A tiny react component to present time passed in a humanistic format",
   "main": "dist/index.js",
   "scripts": {
